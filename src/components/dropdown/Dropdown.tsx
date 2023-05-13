@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ArrowIcon from './assets/ArrowIcon'
 import './styles/Dropdown.css'
 
@@ -15,8 +15,14 @@ const Dropdown: React.FC<iProps> = ({
 	onClickSelect,
 	label,
 }) => {
+	const ref = useRef<HTMLDivElement | null>(null)
+
 	useEffect(() => {
-		function clickEvent(event: any) {}
+		function clickEvent(event: any) {
+			if (event.target.contains(ref.current)) {
+				setIsOpenedDropdown(false)
+			}
+		}
 
 		document.addEventListener('click', clickEvent)
 
@@ -37,7 +43,7 @@ const Dropdown: React.FC<iProps> = ({
 	}
 
 	return (
-		<div className='dropdown__container'>
+		<div className='dropdown__container' ref={ref}>
 			{label && <span className='dropdown__label'>{label}</span>}
 			<div className='dropdown__field'>
 				<div
