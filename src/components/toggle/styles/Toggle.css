@@ -1,0 +1,53 @@
+.toggle__container {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	width: fit-content;
+}
+.toggle__label {
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	color: #666666;
+}
+.toggle__button {
+	display: block;
+	margin-right: 16px;
+	width: 49px;
+	height: 24px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 32px;
+	cursor: pointer;
+	position: relative;
+	transition: 0.3s ease-in-out all;
+}
+.toggle__button:hover {
+	border: 1px solid #aaaaaa;
+}
+.toggle__button::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	right: 3px;
+	margin: 0;
+	width: 18px;
+	height: 18px;
+	margin: auto;
+	border-radius: 50%;
+	background: #f4f4f4;
+	border: 1px solid #cccccc;
+}
+.toggle__button_toggled {
+	background: #7a5cfa;
+}
+.toggle__button_toggled.toggle__button::after {
+	content: '';
+	right: unset;
+	left: 3px;
+	border: none;
+	transition: 0.3s ease-in-out all;
+}

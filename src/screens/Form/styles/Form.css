@@ -1,0 +1,40 @@
+.layout {
+	max-width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(127, 17, 224, 0.2);
+	display: flex;
+	justify-content: center;
+}
+.form {
+	width: 760px;
+	background-color: #fff;
+	padding: 96px 98px;
+}
+.field {
+	margin-top: 32px;
+}
+@media screen and (max-width: 576px) {
+	.form {
+		width: 100%;
+		padding: 20px 40px;
+	}
+	.field {
+		width: 100%;
+	}
+}
+.field:first-child {
+	margin-top: 0;
+}
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 150px;
+}
+@media screen and (max-width: 576px) {
+	.buttons {
+		flex-direction: column;
+		gap: 15px;
+	}
+}

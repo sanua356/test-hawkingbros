@@ -1,0 +1,34 @@
+.label__checkbox {
+	font-size: 16px;
+	color: #666666;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.2s ease-in-out color;
+	width: fit-content;
+}
+.label__checkbox:hover {
+	color: #333333;
+}
+.label__checkbox:hover > .checkmark {
+	border: 1px solid #aaaaaa;
+}
+.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.checkmark {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 8px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 16px;
+	transition: 0.2s ease-in-out border;
+}

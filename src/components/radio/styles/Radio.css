@@ -1,0 +1,34 @@
+.radio__container {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+}
+.radio__label {
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	color: #666666;
+	cursor: pointer;
+}
+.radio__button {
+	position: relative;
+	display: block;
+	margin-right: 16px;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+}
+.radio__button_selected::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #7a5cfa;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}

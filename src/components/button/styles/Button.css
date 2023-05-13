@@ -1,0 +1,23 @@
+.button {
+	font-weight: 400;
+	font-size: 16px;
+	padding: 16px 55px;
+	text-align: center;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+	.button {
+		width: 100%;
+		padding: 16px 30px;
+	}
+}
+.button.white {
+	color: #7a5cfa;
+	border: 1px solid #7a5cfa;
+}
+.button.purple {
+	background: #7a5cfa;
+	color: #fff;
+}
