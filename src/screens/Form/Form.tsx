@@ -1,6 +1,7 @@
 import { useFormik } from 'formik'
 import { FormikProps } from 'formik/dist/types'
 import { useState } from 'react'
+import Button from '../../components/button/Button'
 import Checkbox from '../../components/checkbox/Checkbox'
 import Dropdown from '../../components/dropdown/Dropdown'
 import Input from '../../components/input/Input'
@@ -8,7 +9,6 @@ import Radio from '../../components/radio/Radio'
 import Toggle from '../../components/toggle/Toggle'
 import { FormSchema } from './schemas/Form.schema'
 import './styles/Form.css'
-import Button from '../../components/button/Button'
 
 interface iFieldsList {
 	username: string
@@ -182,9 +182,15 @@ const Form = () => {
 						]}
 					/>
 				</div>
-				<div className="buttons">
+				<div className='buttons'>
 					<Button variant='white'>Cancel</Button>
-					<Button type='submit' variant='purple'>Next</Button>
+					<Button
+						type='submit'
+						variant='purple'
+						disabled={formik.touched && !formik.isValid}
+					>
+						Next
+					</Button>
 				</div>
 			</form>
 		</div>
